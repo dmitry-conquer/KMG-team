@@ -1,0 +1,24 @@
+@import "mixins";
+@import "fonts";
+@import "burger-icon";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-dark font-matter text-base font-normal text-white;
+  }
+}
+
+@layer components {
+  #header-nav {
+    &.active-menu {
+      @apply pointer-events-auto visible top-0 opacity-100;
+    }
+  }
+}

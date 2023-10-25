@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  @@include('components/head.html', { 'title': 'Form' })
+  <body>
+    <div class="relative z-[70] flex min-h-screen flex-col overflow-hidden bg-black">
+      <img src="./img/main-bg.webp" alt="" class="pointer-events-none absolute -z-[1] h-full w-full object-cover opacity-10" />
+      @@include('components/header.html', { })
+      <main class="grow">
+        <section class="relative mb-[3.75rem] overflow-hidden md:mb-[8.75rem]">
+          <div class="container flex flex-col gap-10 pt-28 sm:gap-14 sm:pt-36 md:flex-row md:gap-[4.8rem]">
+            <div class="w-full shrink-0 gap-5 md:w-[35%]">
+              <h1 class="mb-5 text-2xl uppercase text-primary md:text-3xl 2xl:text-4xl">Join THE TEAM</h1>
+              <p class="leading-relaxed 2xl:text-xl">
+                Fill the form dolor sit amet consectetur. Mauris eros lacus porttitor risus sed nullam volutpat felis neque. Malesuada magna mauris
+                faucibus consequat eu arcu sit ac.
+              </p>
+            </div>
+            <form
+              action="#"
+              class="grid grow grid-cols-1 gap-x-5 gap-y-8 rounded-[2.5rem] bg-dark px-4 pb-7 pt-8 max-2xs:-mx-4 2xs:px-10 2xs:pt-[3.25rem] xs:grid-cols-2">
+              <div>
+                <label for="firstName" class="mb-2 block text-sm leading-tight text-white/50">First Name*</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  placeholder="Enter your first name"
+                  class="block w-full border-b border-white bg-transparent pb-3 leading-relaxed placeholder:text-white/50 focus:outline-none" />
+              </div>
+              <div>
+                <label for="lastName" class="mb-2 block text-sm leading-tight text-white/50">Last Name*</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  placeholder="Enter your last name"
+                  class="block w-full border-b border-white bg-transparent pb-3 leading-relaxed placeholder:text-white/50 focus:outline-none" />
+              </div>
+              <div>
+                <label for="email" class="mb-2 block text-sm leading-tight text-white/50">Email*</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  class="block w-full border-b border-white bg-transparent pb-3 leading-relaxed placeholder:text-white/50 focus:outline-none" />
+              </div>
+              <div>
+                <label for="tel" class="mb-2 block text-sm leading-tight text-white/50">Phone</label>
+                <input
+                  type="tel"
+                  id="tel"
+                  placeholder="Enter your phone"
+                  class="block w-full border-b border-white bg-transparent pb-3 leading-relaxed placeholder:text-white/50 focus:outline-none" />
+              </div>
+              <div class="xs:col-span-2">
+                <label for="location" class="mb-2 block text-sm leading-tight text-white/50">Location</label>
+                <input
+                  type="text"
+                  id="location"
+                  placeholder="City, state"
+                  class="block w-full border-b border-white bg-transparent pb-3 leading-relaxed placeholder:text-white/50 focus:outline-none" />
+              </div>
+              <div class="xs:col-span-2">
+                <label for="School" class="mb-2 block text-sm leading-tight text-white/50">School</label>
+                <input
+                  type="text"
+                  id="School"
+                  placeholder="Enter your school (if you are in school)"
+                  class="block w-full border-b border-white bg-transparent pb-3 leading-relaxed placeholder:text-white/50 focus:outline-none" />
+              </div>
+              <div class="xs:col-span-2">
+                <label for="message" class="mb-2 block text-sm leading-tight text-white/50">Message*</label>
+                <textarea
+                  id="message"
+                  placeholder="Tell us about yourself and what you do"
+                  class="block h-24 w-full resize-none border-b border-white bg-transparent pb-3 leading-relaxed placeholder:text-white/50 focus:outline-none"></textarea>
+              </div>
+              <div>
+                <label for="connection" class="mb-2 block text-sm leading-tight text-white/50">Connection (how did you hear about us)</label>
+                <select
+                  id="connection"
+                  class="block w-full border-b border-white bg-transparent pb-3 leading-relaxed placeholder:text-white/50 focus:outline-none">
+                  <option value="internet" class="bg-dark">Internet</option>
+                  <option value="internet" class="bg-dark">Internet</option>
+                  <option value="internet" class="bg-dark">Internet</option>
+                  <option value="internet" class="bg-dark">Internet</option>
+                  <option value="internet" class="bg-dark">Internet</option>
+                  <option value="internet" class="bg-dark">Internet</option>
+                </select>
+              </div>
+              <div class="xs:col-span-2">
+                <button type="submit" class="w-full gap-4 rounded-[2.5rem] bg-primary hover:bg-primary/80 transition-colors duration-300 p-3 text-center text-xl text-black xs:w-1/2">Send</button>
+              </div>
+              <div class="xs:col-span-2 text-center">
+                <p class="text-red-800">Email failed to send. Check the fields and try again</p>
+                <p class="text-green-800">The message has been successfully sent!</p>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+      @@include('components/footer-simple.html', { })
+    </div>
+    <script type="module" crossorigin src="./js/app.min.js"></script>
+  </body>
+</html>
